@@ -13,6 +13,7 @@ function solution(clothes) {
     for (c of set) {
         handleCategory.push(c);
     }
+    console.log(handleCategory);
 
     // 카테고리가 1개일 경우, 해당 의상 개수 리턴
     if (handleCategory.length == 1) return category.length;
@@ -31,7 +32,6 @@ function solution(clothes) {
         countArr.push(count);
         count = 0;
     }
-
     console.log(countArr);
     let answer = countArr.map((count) => count + 1);
     return answer.reduce((prev, curr) => prev * curr) - 1;
