@@ -9,6 +9,7 @@ function solution(s) {
     let result = [];
     let countResult = [];
 
+    // 주어진 문자열에 나타나는 모든 숫자 배열 구하기
     for (i = 0; i < s.length; i++) {
         if (s[i] * 1 || s[i] == 0) currNum += s[i];
         else {
@@ -16,12 +17,16 @@ function solution(s) {
             currNum = '';
         }
     }
+    console.log("arr", arr);
     const set = new Set(arr);
 
     set.forEach((e) => {
         if (e != '') result.push(e);
     });
 
+    console.log("result", result);
+
+    // 모든 숫자에 대한 출현 횟수 계산
     for (i = 0; i < result.length; i++) {
         let curr = result[i];
         let count = 0;
@@ -37,7 +42,7 @@ function solution(s) {
     console.log("countResult", countResult);
 
     console.log("result", result, "countResult", countResult);
-    // 카운트 리저트 값이 큰 순서대로 result 출력
+    // 출현 횟수에 따른 배열 정렬 후 리턴
     let currCountMax;
     let a2 = [];
 
