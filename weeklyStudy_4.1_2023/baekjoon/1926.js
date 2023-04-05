@@ -58,7 +58,7 @@ function solution(graph, N, M) {
 }
 
 let [info, ...input] = require("fs")
-  .readFileSync("test.txt")
+  .readFileSync("1926.txt")
   .toString()
   .trim()
   .split("\n");
