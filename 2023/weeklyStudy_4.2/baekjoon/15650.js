@@ -1,4 +1,4 @@
-// 15650번: N과 M(1)
+// 15650번: N과 M(2)
 
 function solution(N, M) {
   // 방문을 확인하기 위한 배열
@@ -15,7 +15,7 @@ function solution(N, M) {
       result.push(tmp.join(" "));
     } else {
       for (let i = start; i <= N; i++) {
-        // 1. 해당 위치 방문 표시 및 결과 배열에 추가
+        // 1. 해당 위치 방문 표시 및 tmp 배열에 추가
         if (!visited[i]) {
           visited[i] = true;
           tmp.push(i);
